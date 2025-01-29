@@ -1,0 +1,15 @@
+cabal-version: >=1.8
+
+name: xmonad-contexts
+version: 0.0.0
+build-type: Simple
+
+library
+  hs-source-dirs: .
+  exposed-modules:
+    XMonad.Actions.Contexts
+  build-depends:
+    base,
+    containers,
+    xmonad,
+    xmonad-contrib
