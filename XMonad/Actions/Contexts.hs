@@ -54,6 +54,7 @@ switchContext name = do
     case maybeNewCtx of
         Nothing     -> return False
         Just newCtx -> do
+            broadcastMessage ReleaseResources
             xstate <- get
             let currentCtx = Context (windowset xstate)
                 newCtxMap' = Map.insert (currentCtxName ctxStorage) currentCtx newCtxMap
